@@ -42,9 +42,9 @@ object ProgressExhaustJob extends BaseCollectionExhaustJob {
   private val assessmentAggDBSettings = Map("table" -> "assessment_aggregator", "keyspace" -> AppConf.getConfig("sunbird.courses.keyspace"), "cluster" -> "LMSCluster");
   private val contentHierarchyDBSettings = Map("table" -> "content_hierarchy", "keyspace" -> AppConf.getConfig("sunbird.content.hierarchy.keyspace"), "cluster" -> "ContentCluster");
 
-  private val filterColumns = Seq("courseid", "collectionName", "batchid", "batchName", "userid",  "state", "district", "orgname", "board", "enrolleddate", "completedon", "certificatestatus", "completionPercentage");
-  private val columnsOrder = List("Collection Id", "Collection Name", "Batch Id", "Batch Name", "User UUID", "State", "District", "Org Name", "Category", "Enrolment Date", "Completion Date", "Certificate Status", "Progress", "Total Score")
-  private val columnMapping = Map("courseid" -> "Collection Id", "collectionName" -> "Collection Name", "batchid" -> "Batch Id", "batchName" -> "Batch Name", "userid" -> "User UUID",
+  private val filterColumns = Seq("courseid", "collectionName", "batchid", "batchName", "userid", "firstname", "lastname",  "state", "district", "orgname", "board", "enrolleddate", "completedon", "certificatestatus", "completionPercentage");
+  private val columnsOrder = List("Collection Id", "Collection Name", "Batch Id", "Batch Name", "User UUID", "User First Name", "User Last Name",  "State", "District", "Org Name", "Category", "Enrolment Date", "Completion Date", "Certificate Status", "Progress", "Total Score")
+  private val columnMapping = Map("courseid" -> "Collection Id", "collectionName" -> "Collection Name", "batchid" -> "Batch Id", "batchName" -> "Batch Name", "userid" -> "User UUID", "firstname" -> "User First Name", "lastname" -> "User Last Name",
     "state" -> "State", "district" -> "District", "orgname" -> "Org Name", "board" -> "Category", "enrolleddate" -> "Enrolment Date", "completedon" -> "Completion Date",
     "completionPercentage" -> "Progress", "total_sum_score" -> "Total Score", "certificatestatus" -> "Certificate Status")
 
