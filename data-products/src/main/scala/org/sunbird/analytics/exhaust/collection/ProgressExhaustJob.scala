@@ -27,7 +27,7 @@ object ProgressExhaustJob extends BaseCollectionExhaustJob {
   private val defaultObjectType = "QuestionSet";
 
   override def getUserCacheColumns(): Seq[String] = {
-    Seq("userid", "state", "district", "cluster", "orgname", "schooludisecode", "schoolname", "block", "board", "rootorgid", "usertype", "usersubtype")
+    Seq("userid", "username", "state", "district", "cluster", "orgname", "schooludisecode", "schoolname", "block", "board", "rootorgid", "usertype", "usersubtype")
   }
   
   override def getEnrolmentColumns() : Seq[String] = {
