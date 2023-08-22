@@ -43,8 +43,8 @@ object ProgressExhaustJob extends BaseCollectionExhaustJob {
   private val contentHierarchyDBSettings = Map("table" -> "content_hierarchy", "keyspace" -> AppConf.getConfig("sunbird.content.hierarchy.keyspace"), "cluster" -> "ContentCluster");
 
   private val filterColumns = Seq("courseid", "collectionName", "batchid", "batchName", "userid", "username", "state", "district", "orgname", "board", "enrolleddate", "completedon", "certificatestatus", "completionPercentage");
-  private val columnsOrder = List("Collection Name", "Batch Name", "User Name", "Enrolment Date", "Completion Date", "Certificate Status", "Progress", "Total Score", "Collection Id", "Batch Id","User UUID", "State", "District", "Org Name", "Category")
-  private val columnMapping = Map("courseid" -> "Collection Id", "collectionName" -> "Collection Name", "batchid" -> "Batch Id", "batchName" -> "Batch Name", "userid" -> "User UUID", "username" -> "User Name",
+  private val columnsOrder = List("Course Name", "Batch Name", "User Name", "Enrolment Date", "Completion Date", "Certificate Status", "Progress", "Total Score", "Collection Id", "Batch Id","User UUID", "State", "District", "Org Name", "Category")
+  private val columnMapping = Map("courseid" -> "Collection Id", "collectionName" -> "Course Name", "batchid" -> "Batch Id", "batchName" -> "Batch Name", "userid" -> "User UUID", "username" -> "User Name",
     "state" -> "State", "district" -> "District", "orgname" -> "Org Name", "board" -> "Category", "enrolleddate" -> "Enrolment Date", "completedon" -> "Completion Date",
     "completionPercentage" -> "Progress", "total_sum_score" -> "Total Score", "certificatestatus" -> "Certificate Status")
 
